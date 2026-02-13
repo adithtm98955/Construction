@@ -11,10 +11,7 @@
     --blueprint-accent: #fb7e30;
 }
 
-img {
-    decoding: async;
-    /* Unblock main thread during image decoding */
-}
+
 
 /* Performance Utilities */
 .optimize-rendering {
@@ -155,7 +152,7 @@ h6 {
 /* --- Centered Card Grid Hero Theme (Updated) --- */
 /* --- Centered Card Grid Hero Theme (Updated) --- */
 .hero-center-grid {
-    background-color: #f8f9fa;
+    background-color: #000;
     position: relative;
     padding-top: 80px;
     /* Adjusted for desktop navbar */
@@ -179,7 +176,7 @@ h6 {
     background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    opacity: 0.70;
+    opacity: 0.5;
     /* Subtle background */
     z-index: 1;
     /* filter: grayscale(100%); */
@@ -367,7 +364,8 @@ h6 {
     /* Slightly reduced for better fit */
     font-weight: 900;
     line-height: 1;
-    color: #111;
+    color: #fff;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     margin-bottom: 1.5rem;
     letter-spacing: -2px;
 }
@@ -380,16 +378,16 @@ h6 {
 }
 
 .hero-title-outlined {
-    color: transparent;
-    -webkit-text-stroke: 2px #ff6b00;
-    /* Orange outline */
+    color: #ff6b00;
+    /* Orange filled */
     position: relative;
     z-index: 1;
 }
 
 .hero-center-lead {
     font-size: 1.25rem;
-    color: #555;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     max-width: 700px;
     margin: 0 auto 2.5rem auto;
 }
@@ -1230,7 +1228,7 @@ img[data-src] {
     width: 100%;
 }
 
- / *   H e r o   G a p   F i l l e r   S t y l e s   * /       
+/* Hero Gap Filler Styles */
 
 /* Hero Gap Filler */
 .hero-gap-filler {
@@ -1328,7 +1326,6 @@ img[data-src] {
 }
 
 @media (max-width: 991px) {}
-}
 
 /* --- Bootstrap Standard Color Overrides --- */
 /* Overriding Bootstrap's default yellow warning color with our brand orange */
