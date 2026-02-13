@@ -1,15 +1,5 @@
 /* Global Styles */
-:root {
-    --primary-color: #ffc107;
-    --dark-bg: #05101c;
-    /* Deep navy/black - Keeping for footer */
-    --tech-blue: #0f1c2e;
-    --grid-color: rgba(0, 0, 0, 0.05);
-    /* Changed to dark for white theme */
-    --blueprint-line: rgba(5, 16, 28, 0.2);
-    /* Darker blueprint lines */
-    --blueprint-accent: #ffc107;
-}
+
 
 img {
     decoding: async;
