@@ -1,0 +1,1336 @@
+/* Global Styles */
+:root {
+    --primary-color: #ffc107;
+    --dark-bg: #05101c;
+    /* Deep navy/black - Keeping for footer */
+    --tech-blue: #0f1c2e;
+    --grid-color: rgba(0, 0, 0, 0.05);
+    /* Changed to dark for white theme */
+    --blueprint-line: rgba(5, 16, 28, 0.2);
+    /* Darker blueprint lines */
+    --blueprint-accent: #ffc107;
+}
+
+img {
+    decoding: async;
+    /* Unblock main thread during image decoding */
+}
+
+/* Performance Utilities */
+.optimize-rendering {
+    content-visibility: auto;
+    /* Skip rendering off-screen content */
+    contain-intrinsic-size: 1000px;
+    /* approximates section height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Top Nav */
+.custom-top-nav {
+    background-color: #000;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Main Navbar */
+.navbar {
+    background-color: var(--dark-bg);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Hero Section - White Theme */
+.hero-section {
+    background-color: #ffffff;
+    min-height: 90vh;
+    padding-top: 100px;
+    /* Space for navbar */
+    position: relative;
+    padding-bottom: 50px;
+    color: #333;
+    /* Ensure text is dark */
+}
+
+/* Background Grid Overlay */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* Decoration Squares */
+.decoration-squares span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--primary-color);
+    margin-right: 5px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    animation: pulse 2s infinite;
+}
+
+.decoration-squares span:nth-child(2) {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.highlight-underline {
+    position: relative;
+    z-index: 1;
+}
+
+.highlight-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 193, 7, 0.3);
+    /* Softer highlight on white */
+    z-index: -1;
+}
+
+/* Yellow Promo Box */
+.yellow-box-promo {
+    background-color: var(--primary-color);
+    color: #000;
+    border-radius: 4px;
+    min-width: 120px;
+}
+
+/* --- Centered Card Grid Hero Theme --- */
+/* --- Centered Card Grid Hero Theme (Updated) --- */
+/* --- Centered Card Grid Hero Theme (Updated) --- */
+.hero-center-grid {
+    background-color: #f8f9fa;
+    position: relative;
+    padding-top: 80px;
+    /* Adjusted for desktop navbar */
+    padding-bottom: 150px;
+    /* Increased bottom padding to push visual center UP */
+    min-height: 100vh;
+    /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background Image with Overlay */
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    /* Subtle background */
+    z-index: 1;
+    filter: grayscale(100%);
+    /* Keeps it neutral */
+}
+
+/* Background Grid Lines (Optional - keep or remove based on preference, keeping for texture) */
+.hero-center-grid::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Exact 3D Isometric Blocks */
+.hero-iso-blocks-decoration {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    /* Positioned well inside the right edge */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: flex-end;
+    /* Align bottom to stagger upward */
+    gap: 0;
+    /* No gap, allow visual overlap via transform/margin if needed, but let's use margin */
+    z-index: 2;
+    pointer-events: none;
+}
+
+.iso-block {
+    position: relative;
+    width: 60px;
+    /* Base width */
+    margin: 0 10px;
+    /* Spacing between pillars */
+    transition: transform 0.3s ease;
+}
+
+/* Left Face */
+.iso-block::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    /* Half width */
+    height: 100%;
+    background: #2b2e35;
+    /* Dark Grey Side */
+    transform-origin: top right;
+    transform: skewY(30deg);
+}
+
+/* Right Face */
+.iso-block::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    /* Half width */
+    height: 100%;
+    background: #1a1c22;
+    /* Black Side */
+    transform-origin: top left;
+    transform: skewY(-30deg);
+}
+
+/* Top Face (Diamond Cap) */
+.iso-block span {
+    position: absolute;
+    top: -34px;
+    /* Calculated: 60px width * tan(30) ~ 34.6px - slightly adj */
+    left: 0;
+    width: 100%;
+    height: 35px;
+    /* height needed to cover */
+    background: #ff6b00;
+    /* Solid Orange Top */
+    transform: rotate(45deg) skew(15deg, 15deg);
+    /* Creates the isometric diamond */
+    transform-origin: bottom center;
+    /* Actually a rotated square is easier */
+    width: 30px;
+    height: 30px;
+    top: -42px;
+    /* Pull up to sit on top */
+    left: 15px;
+    /* Center horizontally relative to 60px container */
+    transform: scaleY(0.5774) rotate(45deg);
+    /* ScaleY by tan(30) then rotate */
+    background: #ff6b00;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.2);
+    /* Slight glow */
+}
+
+/* Heights Staggering */
+/* Middle tallest, Left medium, Right short */
+.block-1 {
+    height: 180px;
+    /* Medium Left */
+    margin-bottom: -50px;
+    /* Offset for isometric perspective visual */
+}
+
+.block-2 {
+    height: 280px;
+    /* Tall Middle */
+    z-index: 5;
+    /* In front */
+    margin-bottom: -80px;
+    margin-left: -15px;
+    /* Tighter grouping */
+}
+
+.block-3 {
+    height: 120px;
+    /* Short Right */
+    margin-bottom: -20px;
+    margin-left: -15px;
+}
+
+@media (max-width: 991px) {
+    .hero-iso-blocks-decoration {
+        right: 5%;
+        transform: translateY(-50%) scale(0.7);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-iso-blocks-decoration {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-center-grid {
+        min-height: 60vh;
+        padding-top: 40px;
+    }
+
+    /* Hide some bars on very small screens to keep text readable */
+    .bar-2,
+    .bar-4 {
+        display: none;
+    }
+
+    .bar-1 {
+        top: -500px;
+        left: -180px;
+        width: 200px;
+    }
+
+    .bar-3 {
+        bottom: -350px;
+        right: -100px;
+        width: 180px;
+    }
+
+    .hero-center-title {
+        font-size: 2.8rem;
+        /* Smaller font on mobile */
+    }
+}
+
+.hero-center-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1000px;
+    /* Increased width for text */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-center-title {
+    font-size: 4rem;
+    /* Slightly reduced for better fit */
+    font-weight: 900;
+    line-height: 1;
+    color: #111;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+}
+
+/* Responsive Font Size */
+@media (min-width: 1400px) {
+    .hero-center-title {
+        font-size: 5rem;
+    }
+}
+
+.hero-title-outlined {
+    color: transparent;
+    -webkit-text-stroke: 2px #ff6b00;
+    /* Orange outline */
+    position: relative;
+    z-index: 1;
+}
+
+.hero-center-lead {
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+}
+
+/* Floating Image Cards */
+.floating-cards-container {
+    position: absolute;
+    top: 50px;
+    /* Pushed down to create gap from navbar */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    width: 160px;
+    height: 200px;
+}
+
+.hero-float-card img {
+    height: 140px;
+}
+
+/* Feature Cards Styles */
+.hero-feature-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Soft professional shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    position: relative;
+    z-index: 20;
+    text-align: left;
+    border-bottom: 4px solid transparent;
+}
+
+.hero-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-bottom: 4px solid #ff6b00;
+    /* Orange highlight on hover */
+}
+
+.hero-feature-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero-feature-card:hover img {
+    transform: scale(1.05);
+    /* Zoom effect */
+}
+
+.feature-card-content {
+    padding: 20px;
+}
+
+.feature-card-content h5 {
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.feature-card-content p {
+    color: #666;
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    .hero-center-grid {
+        min-height: 100vh;
+        /* Ensure full height on mobile too */
+        padding-top: 100px;
+        /* Reduced from 150px to remove gap, but enough for mobile nav */
+        padding-bottom: 200px;
+        /* Significant bottom padding to push text up on mobile */
+    }
+
+    .hero-center-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-float-card {
+        display: none;
+        /* Hide floating cards on tablet/mobile for clarity */
+    }
+
+    /* Show a static grid or carousel on mobile if needed, or just hide */
+    .mobile-hero-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .mobile-hero-img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+}
+
+@media (min-width: 992px) {
+    .mobile-hero-grid {
+        display: none;
+    }
+}
+
+/* Slanted Details Bar Container */
+.hero-slanted-bar-container {
+    display: flex;
+    justify-content: center;
+    background: #FFC107;
+    /* Yellow/Orange Background Band */
+    padding: 3px;
+    /* Creates the border effect */
+    max-width: 600px;
+    margin: 0 auto;
+    /* transform: skewX(-20deg);  Optional: Skew the whole container if desired, but image shows internal skews */
+}
+
+.slanted-btn {
+    flex: 1;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.slanted-btn .btn-content {
+    /* transform: skewX(20deg); Counteract container skew if applied */
+    z-index: 2;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+/* Dark Side (Left) */
+.slanted-btn.dark-btn {
+    background: #333;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    margin-right: -15px;
+    /* Pull them together */
+    z-index: 2;
+}
+
+.slanted-btn.dark-btn:hover {
+    background: #222;
+}
+
+/* White Side (Right) */
+.slanted-btn.white-btn {
+    background: #fff;
+    color: #333;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 1;
+}
+
+.slanted-btn.white-btn:hover {
+    background: #f1f1f1;
+}
+
+@media (max-width: 576px) {
+    .hero-slanted-bar-container {
+        flex-direction: column;
+        background: transparent;
+    }
+
+    .slanted-btn.dark-btn,
+    .slanted-btn.white-btn {
+        clip-path: none;
+        margin: 0 0 10px 0;
+        border-radius: 4px;
+        width: 100%;
+    }
+}
+
+.grayscale-hover {
+    filter: grayscale(0%);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.grayscale-hover:hover {
+    transform: scale(1.05);
+}
+
+/* Wireframe City Animation */
+.wireframe-city {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.building {
+    width: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /* Dark borders for white theme */
+    border-bottom: none;
+    position: relative;
+}
+
+.building::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    right: 5px;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 100% 10px;
+}
+
+.b1 {
+    height: 60px;
+    width: 40px;
+}
+
+.b2 {
+    height: 100px;
+    width: 60px;
+    margin-left: -10px;
+}
+
+.b3 {
+    height: 80px;
+    width: 50px;
+    margin-left: 20px;
+}
+
+.b4 {
+    height: 120px;
+    width: 70px;
+    margin-left: -5px;
+}
+
+.b5 {
+    height: 50px;
+    width: 90px;
+}
+
+.b6 {
+    height: 140px;
+    width: 50px;
+    margin-left: 20px;
+}
+
+.b7 {
+    height: 70px;
+    width: 60px;
+}
+
+
+/* --- Construction Decor Styles --- */
+
+.construction-drawings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Measure Lines */
+.measure-line {
+    position: absolute;
+    border-color: var(--blueprint-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.measure-line::before,
+.measure-line::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-color);
+}
+
+.measure-line.horizontal {
+    border-bottom: 1px dashed var(--blueprint-line);
+}
+
+.measure-line.horizontal::before {
+    left: 0;
+    bottom: -3px;
+}
+
+.measure-line.horizontal::after {
+    right: 0;
+    bottom: -3px;
+}
+
+.measure-line.vertical {
+    border-left: 1px dashed var(--blueprint-line);
+}
+
+.measure-line.vertical::before {
+    top: 0;
+    left: -3px;
+}
+
+.measure-line.vertical::after {
+    bottom: 0;
+    left: -3px;
+}
+
+.measure-text {
+    background-color: #fff;
+    /* White bg for text */
+    color: #333;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    font-family: 'Space Grotesk', monospace;
+    font-weight: bold;
+    border: 1px solid var(--blueprint-line);
+}
+
+/* Compass */
+.blueprint-compass {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--blueprint-line);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blueprint-compass::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--blueprint-line);
+    transform: rotate(45deg);
+}
+
+.blueprint-compass::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--blueprint-line);
+    transform: rotate(-45deg);
+}
+
+.blueprint-compass .direction {
+    position: absolute;
+    top: -5px;
+    background: #fff;
+    color: #333;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+.blueprint-compass .arrow {
+    width: 4px;
+    height: 40px;
+    background: linear-gradient(to top, transparent 50%, var(--primary-color) 50%);
+    z-index: 1;
+    transform: rotate(30deg);
+}
+
+
+/* Crane Drawing */
+.crane-drawing {
+    position: absolute;
+    bottom: 150px;
+    /* On top of city */
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+}
+
+.crane-drawing .tower {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 6px;
+    height: 80px;
+    background: repeating-linear-gradient(0deg, #333, #333 2px, transparent 2px, transparent 6px);
+    border: 1px solid #333;
+}
+
+.crane-drawing .arm {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 80px;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, #333, #333 2px, transparent 2px, transparent 6px);
+    border: 1px solid #333;
+}
+
+.crane-drawing .counter-weight {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 15px;
+    height: 10px;
+    background-color: var(--primary-color);
+}
+
+.crane-drawing .cable {
+    position: absolute;
+    top: 24px;
+    right: 15px;
+    width: 1px;
+    height: 30px;
+    background-color: #333;
+    animation: cable-move 4s infinite ease-in-out;
+}
+
+.crane-drawing .hook {
+    position: absolute;
+    top: 54px;
+    right: 12px;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #333;
+    border-top: none;
+    border-radius: 0 0 50% 50%;
+    animation: hook-move 4s infinite ease-in-out;
+}
+
+@keyframes cable-move {
+
+    0%,
+    100% {
+        height: 30px;
+    }
+
+    50% {
+        height: 50px;
+    }
+}
+
+@keyframes hook-move {
+
+    0%,
+    100% {
+        top: 54px;
+    }
+
+    50% {
+        top: 74px;
+    }
+}
+
+/* Corner Markers */
+.corner-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--blueprint-line);
+    opacity: 0.7;
+}
+
+.corner-marker.top-left {
+    top: 20px;
+    left: 20px;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.corner-marker.top-right {
+    top: 20px;
+    right: 20px;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.corner-marker.bottom-left {
+    bottom: 20px;
+    left: 20px;
+    border-right: 0;
+    border-top: 0;
+}
+
+.corner-marker.bottom-right {
+    bottom: 20px;
+    right: 20px;
+    border-left: 0;
+    border-top: 0;
+}
+
+
+/* Service Cards */
+.service-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Footer */
+.hover-white:hover {
+    color: #fff !important;
+}
+
+/* Mobile Modal */
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 3rem;
+    }
+
+    .yellow-box-promo {
+        margin: 0 auto 1rem auto;
+    }
+
+    .d-flex.align-items-center.gap-3 {
+        flex-direction: column;
+    }
+
+    .decoration-squares {
+        justify-content: center;
+        display: flex;
+    }
+
+    .measure-line {
+        display: none;
+        /* Hide complex details on mobile for clarity */
+    }
+
+    .highlight-underline {
+        display: inline-block;
+        /* Ensure transforms/margins work */
+        padding-top: 5px;
+        /* Add small visual gap from line above */
+    }
+
+    .highlight-underline::after {
+        bottom: 2px;
+        /* Adjust underline position for mobile */
+        height: 6px;
+        /* Slightly thinner on mobile */
+    }
+}
+
+/* Utilities */
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.opacity-75 {
+    opacity: 0.75 !important;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+.letter-spacing-3 {
+    letter-spacing: 3px;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Text Gradient */
+.text-gradient-dark {
+    background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Infinite Auto Scroll Marquee */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.mask-edges {
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee-scroll 20s linear infinite;
+    padding-left: 100%;
+    /* Start off screen */
+}
+
+/* Reset for seamless loop if needed, but basic scroll is simplest: 
+   Better seamless: duplicate content and translate */
+.marquee-wrapper {
+    display: flex;
+    width: max-content;
+    animation: scroll-seamless 30s linear infinite;
+}
+
+.marquee-wrapper:hover {
+    animation-play-state: paused;
+}
+
+.marquee-card {
+    width: 30vw;
+    /* Approx 3 cards per screen width */
+    min-width: 300px;
+    /* Minimum width for mobile readability */
+    white-space: normal;
+    /* Allow text wrap inside card */
+    margin-right: 2rem;
+    flex-shrink: 0;
+}
+
+@keyframes scroll-seamless {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* Move half way (assuming content is duplicated) */
+}
+
+/* Featured Projects Styles (Services Page) */
+.project-card {
+    transition: all 0.3s ease;
+    border: 3px solid #ffc107;
+    /* ~1mm Golden Frame */
+    padding: 6px;
+    /* ~2mm White Frame */
+    background-color: #fff;
+}
+
+.project-card .zoom-in {
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.project-card:hover .zoom-in {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Utilities */
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+/* Lazy Loading Animation */
+.fade-in {
+    animation: fadeInEffect 0.3s ease-in-out forwards;
+}
+
+/* White Grid Hero Background */
+.hero-grid-white {
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+}
+
+
+@keyframes fadeInEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+img[data-src] {
+    opacity: 0;
+}
+
+
+/* Custom Utilities for New Sections */
+.text-brand {
+    color: #212529;
+}
+
+.bg-brand {
+    background-color: #ffc107;
+}
+
+.btn-brand {
+    background-color: #ffc107;
+    color: #000;
+    border: 1px solid #ffc107;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-brand:hover {
+    background-color: #e0a800;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+.btn-outline-brand {
+    color: #212529;
+    border: 2px solid #212529;
+    padding: 12px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-outline-brand:hover {
+    background-color: #212529;
+    color: #fff;
+    border-color: #212529;
+}
+
+.career-section {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.geometric-cta {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff 60%, #fff3cd 60%);
+}
+
+.showcase-nav .nav-link {
+    color: #6c757d;
+    font-weight: 600;
+    margin-right: 1.5rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.showcase-nav .nav-link:hover {
+    color: #212529;
+}
+
+.showcase-nav .nav-link.active {
+    color: #212529;
+}
+
+.showcase-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #ffc107;
+    transition: width 0.3s ease;
+}
+
+.showcase-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+ / *   H e r o   G a p   F i l l e r   S t y l e s   * /       
+
+/* Hero Gap Filler */
+.hero-gap-filler {
+    position: relative;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.gap-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--blueprint-line), transparent);
+    z-index: 0;
+}
+
+.gap-circle-outer {
+    width: 120px;
+    height: 120px;
+    border: 1px dashed var(--blueprint-line);
+    border-radius: 50%;
+    animation: rotate-slow 20s linear infinite;
+    position: absolute;
+    z-index: 1;
+}
+
+.gap-circle-outer::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.gap-circle-inner {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.2);
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.gap-circle-inner::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 1px dotted #333;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.gap-dots {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gap-dots span {
+    width: 4px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+@keyframes rotate-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 991px) {
+
+    .gap-line,
+    .hero-gap-filler {
+        display: none;
+    }
+}

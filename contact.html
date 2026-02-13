@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Co. - Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="custom-top-nav py-2 text-white">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="top-info">
+                <small class="me-3"><i class="fas fa-phone-alt me-1"></i> +1 234 567 890</small>
+                <small><i class="fas fa-envelope me-1"></i> info@construct.com</small>
+            </div>
+            <div class="top-social d-none d-md-block">
+                <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><span class="text-warning">CON</span>STRUCT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#mobileMenuModal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="details.html">Details</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-warning ms-3 d-none d-lg-block">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Modal -->
+    <div class="modal fade" id="mobileMenuModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-warning">CONSTRUCT</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+                    <ul class="nav flex-column text-center fs-2 gap-3">
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="details.html">Details</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5 bg-dark text-white text-center">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold">Contact Us</h1>
+            <p class="lead">Let's build something great together.</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                        <div class="card-body p-4 p-md-5 bg-white">
+                            <h2 class="fw-bold mb-4">Get in Touch</h2>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control bg-light border-0" id="nameInput"
+                                                placeholder="Your Name">
+                                            <label for="nameInput" class="text-muted">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control bg-light border-0" id="emailInput"
+                                                placeholder="name@example.com">
+                                            <label for="emailInput" class="text-muted">Email Address</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <select class="form-select bg-light border-0" id="subjectSelect"
+                                        aria-label="Project Type">
+                                        <option selected>General Inquiry</option>
+                                        <option value="1">Residential Construction</option>
+                                        <option value="2">Commercial Project</option>
+                                        <option value="3">Renovation</option>
+                                        <option value="4">Career Opportunity</option>
+                                    </select>
+                                    <label for="subjectSelect" class="text-muted">Subject</label>
+                                </div>
+
+                                <div class="form-floating mb-4">
+                                    <textarea class="form-control bg-light border-0" placeholder="Leave a comment here"
+                                        id="messageTextarea" style="height: 150px"></textarea>
+                                    <label for="messageTextarea" class="text-muted">Tell us about your project</label>
+                                </div>
+
+                                <button type="submit"
+                                    class="btn btn-warning w-100 py-3 fw-bold text-uppercase letter-spacing-1 hover-lift">
+                                    Send Message <i class="fas fa-paper-plane ms-2"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="d-flex flex-column h-100 justify-content-between">
+                        <div>
+                            <h3 class="fw-bold mb-4">Contact Info</h3>
+
+                            <!-- Address Card -->
+                            <div class="d-flex mb-4 p-3 rounded-3 bg-light hover-lift transition-all">
+                                <div class="flex-shrink-0">
+                                    <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                                        style="width: 50px; height: 50px;">
+                                        <i class="fas fa-map-marker-alt fa-lg"></i>
+                                    </div>
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="fw-bold mb-1">Head Office</h5>
+                                    <p class="text-muted mb-0 small">123 Builder Lane, Suite 100<br>Cityville, ST 12345
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Phone Card -->
+                            <div class="d-flex mb-4 p-3 rounded-3 bg-light hover-lift transition-all">
+                                <div class="flex-shrink-0">
+                                    <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                                        style="width: 50px; height: 50px;">
+                                        <i class="fas fa-phone-alt fa-lg"></i>
+                                    </div>
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="fw-bold mb-1">Phone</h5>
+                                    <p class="text-muted mb-0 small">+1 234 567 890</p>
+                                </div>
+                            </div>
+
+                            <!-- Email Card -->
+                            <div class="d-flex mb-4 p-3 rounded-3 bg-light hover-lift transition-all">
+                                <div class="flex-shrink-0">
+                                    <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                                        style="width: 50px; height: 50px;">
+                                        <i class="fas fa-envelope fa-lg"></i>
+                                    </div>
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="fw-bold mb-1">Email</h5>
+                                    <p class="text-muted mb-0 small">info@construct.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Map -->
+                        <div class="mt-4 rounded-4 overflow-hidden shadow-lg border border-2 border-white">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1841267568897!2d-73.9877319234857!3d40.757974634796395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1695029177893!5m2!1sen!2sus"
+                                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row py-4">
+                <!-- Column 1: Logo -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a class="navbar-brand fw-bold fs-3" href="index.html">
+                        <span class="text-warning">CON</span>STRUCT
+                    </a>
+                    <p class="mt-3 text-white-50">
+                        Building the future with excellence. Trusted by thousands for quality construction.
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2: Address -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-warning mb-3">Contact Us</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-warning"></i> 123 Builder Lane,
+                            Cityville</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2 text-warning"></i> +1 234 567 8900</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2 text-warning"></i> contact@construct.com</li>
+                    </ul>
+                </div>
+                <!-- Column 3: Quick Links -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-warning mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html"
+                                class="text-white-50 text-decoration-none hover-white">Home</a></li>
+                        <li class="mb-2"><a href="about.html"
+                                class="text-white-50 text-decoration-none hover-white">About Us</a></li>
+                        <li class="mb-2"><a href="services.html"
+                                class="text-white-50 text-decoration-none hover-white">Services</a></li>
+                        <li class="mb-2"><a href="details.html"
+                                class="text-white-50 text-decoration-none hover-white">Details</a></li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-white-50 text-decoration-none hover-white">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-warning mb-3">Newsletter</h5>
+                    <p class="text-white-50">Subscribe for latest updates.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control bg-transparent text-white border-secondary"
+                                placeholder="Email Address">
+                            <button class="btn btn-warning" type="button"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <small class="text-white-50">&copy; 2024 Construct Inc. All rights reserved.</small>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <small class="text-white-50">Privacy Policy | Terms of Use</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
