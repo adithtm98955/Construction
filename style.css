@@ -473,7 +473,7 @@ h6 {
     }
 
     .hero-center-title {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
 
     .hero-float-card {
@@ -1365,4 +1365,15 @@ img[data-src] {
 }
 
 /* Critical Mobile Font Fix - Added at end for priority */
-@media (max-width: 576px) { .hero-center-title { font-size: 8vw !important; word-wrap: break-word; word-break: break-word; hyphens: auto; } .hero-center-content { padding: 0 10px; } }
+@media (max-width: 576px) {
+    .hero-center-title {
+        font-size: 8vw !important;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    .hero-center-content {
+        padding: 0 10px;
+    }
+}
