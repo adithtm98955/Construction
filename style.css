@@ -1377,3 +1377,61 @@ img[data-src] {
         padding: 0 10px;
     }
 }
+
+/* --- Mobile Menu Enhancements --- */
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Modal Styling */
+#mobileMenuModal .modal-content {
+    background: linear-gradient(135deg, #05101c 0%, #0f1c2e 100%);
+    /* Dark gradient */
+}
+
+#mobileMenuModal .nav-link {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6) !important;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+#mobileMenuModal .nav-link:hover,
+#mobileMenuModal .nav-link.active {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.05);
+    /* Subtle highlight */
+    transform: translateX(5px);
+}
+
+#mobileMenuModal .nav-link i {
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    color: var(--primary-color) !important;
+    transition: transform 0.3s ease;
+}
+
+#mobileMenuModal .nav-link:hover i {
+    transform: scale(1.2);
+}
+
+/* Close Button adjustment */
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.8;
+}
+
+.btn-close-white:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
