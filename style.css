@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-    --primary-color: #ffc107;
+    --primary-color: #fb7e30;
     --dark-bg: #05101c;
     /* Deep navy/black - Keeping for footer */
     --tech-blue: #0f1c2e;
@@ -8,7 +8,7 @@
     /* Changed to dark for white theme */
     --blueprint-line: rgba(5, 16, 28, 0.2);
     /* Darker blueprint lines */
-    --blueprint-accent: #ffc107;
+    --blueprint-accent: #fb7e30;
 }
 
 img {
@@ -138,7 +138,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 8px;
-    background-color: rgba(255, 193, 7, 0.3);
+    background-color: rgba(251, 126, 48, 0.3);
     /* Softer highlight on white */
     z-index: -1;
 }
@@ -179,10 +179,10 @@ h6 {
     background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    opacity: 0.15;
+    opacity: 0.70;
     /* Subtle background */
     z-index: 1;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     /* Keeps it neutral */
 }
 
@@ -506,7 +506,7 @@ h6 {
 .hero-slanted-bar-container {
     display: flex;
     justify-content: center;
-    background: #FFC107;
+    background: #fb7e30;
     /* Yellow/Orange Background Band */
     padding: 3px;
     /* Creates the border effect */
@@ -1070,7 +1070,7 @@ h6 {
 /* Featured Projects Styles (Services Page) */
 .project-card {
     transition: all 0.3s ease;
-    border: 3px solid #ffc107;
+    border: 3px solid #fb7e30;
     /* ~1mm Golden Frame */
     padding: 6px;
     /* ~2mm White Frame */
@@ -1147,13 +1147,13 @@ img[data-src] {
 }
 
 .bg-brand {
-    background-color: #ffc107;
+    background-color: #fb7e30;
 }
 
 .btn-brand {
-    background-color: #ffc107;
-    color: #000;
-    border: 1px solid #ffc107;
+    background-color: #fb7e30;
+    color: #fff;
+    border: 1px solid #fb7e30;
     padding: 12px 30px;
     font-weight: 600;
     text-transform: uppercase;
@@ -1162,10 +1162,10 @@ img[data-src] {
 }
 
 .btn-brand:hover {
-    background-color: #e0a800;
-    color: #000;
+    background-color: #e06920;
+    color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+    box-shadow: 0 4px 12px rgba(251, 126, 48, 0.3);
 }
 
 .btn-outline-brand {
@@ -1222,7 +1222,7 @@ img[data-src] {
     left: 0;
     width: 30px;
     height: 3px;
-    background-color: #ffc107;
+    background-color: #fb7e30;
     transition: width 0.3s ease;
 }
 
@@ -1284,7 +1284,7 @@ img[data-src] {
     justify-content: center;
     background: #fff;
     z-index: 2;
-    box-shadow: 0 0 20px rgba(255, 193, 7, 0.2);
+    box-shadow: 0 0 20px rgba(251, 126, 48, 0.2);
     font-size: 1.5rem;
     position: relative;
 }
@@ -1327,10 +1327,39 @@ img[data-src] {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991px) {}
+}
 
-    .gap-line,
-    .hero-gap-filler {
-        display: none;
-    }
+/* --- Bootstrap Standard Color Overrides --- */
+/* Overriding Bootstrap's default yellow warning color with our brand orange */
+.text-warning {
+    color: #fb7e30 !important;
+}
+
+.bg-warning {
+    background-color: #fb7e30 !important;
+}
+
+.btn-warning {
+    background-color: #fb7e30 !important;
+    border-color: #fb7e30 !important;
+    color: #fff !important;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active {
+    background-color: #e06920 !important;
+    /* Slightly darker */
+    border-color: #e06920 !important;
+    color: #fff !important;
+}
+
+.bg-warning-subtle {
+    background-color: rgba(251, 126, 48, 0.1) !important;
+    color: #fb7e30 !important;
+}
+
+.border-warning {
+    border-color: #fb7e30 !important;
 }
