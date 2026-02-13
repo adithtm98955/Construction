@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-    --primary-color: #fb7e30;
+    --primary-color: #fda30b;
     --dark-bg: #05101c;
     /* Deep navy/black - Keeping for footer */
     --tech-blue: #0f1c2e;
@@ -8,7 +8,7 @@
     /* Changed to dark for white theme */
     --blueprint-line: rgba(5, 16, 28, 0.2);
     /* Darker blueprint lines */
-    --blueprint-accent: #fb7e30;
+    --blueprint-accent: #fda30b;
 }
 
 
@@ -135,7 +135,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 8px;
-    background-color: rgba(251, 126, 48, 0.3);
+    background-color: rgba(253, 163, 11, 0.3);
     /* Softer highlight on white */
     z-index: -1;
 }
@@ -261,7 +261,7 @@ h6 {
     width: 100%;
     height: 35px;
     /* height needed to cover */
-    background: #ff6b00;
+    background: #fda30b;
     /* Solid Orange Top */
     transform: rotate(45deg) skew(15deg, 15deg);
     /* Creates the isometric diamond */
@@ -275,9 +275,9 @@ h6 {
     /* Center horizontally relative to 60px container */
     transform: scaleY(0.5774) rotate(45deg);
     /* ScaleY by tan(30) then rotate */
-    background: #ff6b00;
+    background: #fda30b;
     z-index: 10;
-    box-shadow: 0 0 10px rgba(255, 107, 0, 0.2);
+    box-shadow: 0 0 10px rgba(253, 163, 11, 0.2);
     /* Slight glow */
 }
 
@@ -381,7 +381,7 @@ h6 {
 }
 
 .hero-title-outlined {
-    color: #ff6b00;
+    color: #fda30b;
     /* Orange filled */
     position: relative;
     z-index: 1;
@@ -429,7 +429,7 @@ h6 {
 .hero-feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    border-bottom: 4px solid #ff6b00;
+    border-bottom: 4px solid #fda30b;
     /* Orange highlight on hover */
 }
 
@@ -507,7 +507,7 @@ h6 {
 .hero-slanted-bar-container {
     display: flex;
     justify-content: center;
-    background: #fb7e30;
+    background: #fda30b;
     /* Yellow/Orange Background Band */
     padding: 3px;
     /* Creates the border effect */
@@ -1285,7 +1285,7 @@ img[data-src] {
     justify-content: center;
     background: #fff;
     z-index: 2;
-    box-shadow: 0 0 20px rgba(251, 126, 48, 0.2);
+    box-shadow: 0 0 20px rgba(253, 163, 11, 0.2);
     font-size: 1.5rem;
     position: relative;
 }
@@ -1333,35 +1333,35 @@ img[data-src] {
 /* --- Bootstrap Standard Color Overrides --- */
 /* Overriding Bootstrap's default yellow warning color with our brand orange */
 .text-warning {
-    color: #fb7e30 !important;
+    color: #fda30b !important;
 }
 
 .bg-warning {
-    background-color: #fb7e30 !important;
+    background-color: #fda30b !important;
 }
 
 .btn-warning {
-    background-color: #fb7e30 !important;
-    border-color: #fb7e30 !important;
+    background-color: #fda30b !important;
+    border-color: #fda30b !important;
     color: #fff !important;
 }
 
 .btn-warning:hover,
 .btn-warning:focus,
 .btn-warning:active {
-    background-color: #e06920 !important;
+    background-color: #d98d0a !important;
     /* Slightly darker */
-    border-color: #e06920 !important;
+    border-color: #d98d0a !important;
     color: #fff !important;
 }
 
 .bg-warning-subtle {
-    background-color: rgba(251, 126, 48, 0.1) !important;
-    color: #fb7e30 !important;
+    background-color: rgba(253, 163, 11, 0.1) !important;
+    color: #fda30b !important;
 }
 
 .border-warning {
-    border-color: #fb7e30 !important;
+    border-color: #fda30b !important;
 }
 
 /* Critical Mobile Font Fix - Added at end for priority */
