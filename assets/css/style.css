@@ -1978,3 +1978,167 @@ img[data-src] {
     max-width: 250px;
     margin: 0 auto;
 }
+
+/* --- Mobile View Adjustments for Animations --- */
+@media (max-width: 991px) {
+
+    /* --- 1. Auto-Animation for "Building With Excellence" Cards --- */
+    @keyframes autoRevealBack {
+
+        0%,
+        45% {
+            clip-path: circle(0% at 50% 50%);
+            z-index: 1;
+        }
+
+        /* Front Image Visible */
+        50%,
+        95% {
+            clip-path: circle(150% at 50% 50%);
+            z-index: 5;
+        }
+
+        /* Back Image Revealed */
+        100% {
+            clip-path: circle(0% at 50% 50%);
+            z-index: 1;
+        }
+    }
+
+    .custom-card .img-back {
+        opacity: 1 !important;
+        display: block !important;
+        visibility: visible !important;
+        /* Animation: loop every 6 seconds */
+        animation: autoRevealBack 6s infinite ease-in-out;
+    }
+
+    /* Stagger the animations slightly for a dynamic effect */
+    .row.g-4 .col-md-4:nth-of-type(2) .img-back {
+        animation-delay: 2s;
+    }
+
+    .row.g-4 .col-md-4:nth-of-type(3) .img-back {
+        animation-delay: 4s;
+    }
+
+    /* Disable manual hover effects to avoid conflicts */
+    .custom-card:hover .img-back {
+        /* Allow animation to override */
+    }
+
+    .hover-lift:hover {
+        transform: none !important;
+    }
+
+    /* --- 2. Auto-Animation for Premium Services Grid --- */
+    /* Define Animations: Active for 25% of cycle, Inactive for rest */
+    @keyframes autoServiceDesc {
+
+        0%,
+        30% {
+            opacity: 1;
+            max-height: 200px;
+            margin-top: 15px;
+        }
+
+        35%,
+        100% {
+            opacity: 0;
+            max-height: 0;
+            margin-top: 0;
+        }
+    }
+
+    @keyframes autoServiceBg {
+
+        0%,
+        30% {
+            transform: scale(1.1);
+        }
+
+        35%,
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes autoServiceOverlay {
+
+        0%,
+        30% {
+            opacity: 0.4;
+        }
+
+        /* Brighten */
+        35%,
+        100% {
+            opacity: 0.75;
+        }
+
+        /* Darken */
+    }
+
+    @keyframes autoServiceIcon {
+
+        0%,
+        30% {
+            transform: translateY(-10px);
+        }
+
+        35%,
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    /* Apply Animations Loop (8s total for 4 items) */
+    .service-grid .col-md-6 .service-desc {
+        animation: autoServiceDesc 8s infinite ease-in-out;
+        opacity: 0;
+        /* Star hidden */
+    }
+
+    .service-grid .col-md-6 .service-bg {
+        animation: autoServiceBg 8s infinite ease-in-out;
+    }
+
+    .service-grid .col-md-6 .service-overlay {
+        animation: autoServiceOverlay 8s infinite ease-in-out;
+    }
+
+    .service-grid .col-md-6 .service-icon {
+        animation: autoServiceIcon 8s infinite ease-in-out;
+    }
+
+    /* Stagger Animations so one is active at a time */
+    .service-grid .col-md-6:nth-child(1) .service-bg,
+    .service-grid .col-md-6:nth-child(1) .service-desc,
+    .service-grid .col-md-6:nth-child(1) .service-overlay,
+    .service-grid .col-md-6:nth-child(1) .service-icon {
+        animation-delay: 0s;
+    }
+
+    .service-grid .col-md-6:nth-child(2) .service-bg,
+    .service-grid .col-md-6:nth-child(2) .service-desc,
+    .service-grid .col-md-6:nth-child(2) .service-overlay,
+    .service-grid .col-md-6:nth-child(2) .service-icon {
+        animation-delay: 2s;
+    }
+
+    .service-grid .col-md-6:nth-child(3) .service-bg,
+    .service-grid .col-md-6:nth-child(3) .service-desc,
+    .service-grid .col-md-6:nth-child(3) .service-overlay,
+    .service-grid .col-md-6:nth-child(3) .service-icon {
+        animation-delay: 4s;
+    }
+
+    .service-grid .col-md-6:nth-child(4) .service-bg,
+    .service-grid .col-md-6:nth-child(4) .service-desc,
+    .service-grid .col-md-6:nth-child(4) .service-overlay,
+    .service-grid .col-md-6:nth-child(4) .service-icon {
+        animation-delay: 6s;
+    }
+
+    /* Cleanup: Remove static overrides from previous step */
+}
