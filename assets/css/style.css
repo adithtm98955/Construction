@@ -1435,3 +1435,546 @@ img[data-src] {
     transform: rotate(90deg);
     transition: transform 0.3s ease;
 }
+
+/* --- New Parallax Section Components --- */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+}
+
+/* --- Showcase Gallery Styles --- */
+.showcase-gallery {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    /* Fixed height for consistent display */
+    background: #f0f0f0;
+    overflow: hidden;
+}
+
+.gallery-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out 1s, transform 8s ease-out;
+    /* Delay fade out so new image fades in on top first */
+    z-index: 1;
+}
+
+.gallery-img.active {
+    opacity: 1;
+    transform: scale(1.1);
+    /* Subtle zoom effect */
+    transition: opacity 1s ease-in-out 0s, transform 8s ease-out;
+    /* Immediate fade in */
+    z-index: 2;
+}
+
+/* Ensure mobile responsiveness */
+@media (max-width: 768px) {
+    .showcase-gallery {
+        height: 300px;
+    }
+}
+
+/* --- Feature Cards with Images --- */
+.custom-card .card-img-wrapper img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.custom-card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.icon-box-floating {
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover .icon-box-floating {
+    transform: translateY(-5px);
+}
+
+.custom-card .overlay {
+    transition: opacity 0.3s ease;
+}
+
+
+.custom-card:hover .overlay {
+    opacity: 0.15 !important;
+    /* Lighten overlay on hover to reveal image more */
+}
+
+/* --- Card Image Hover Swap (Center Reveal) --- */
+.img-back {
+    opacity: 1;
+    z-index: 3;
+    /* On top of front image */
+    clip-path: circle(0% at 50% 50%);
+    /* Hidden at center initially */
+    transition: clip-path 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.img-front {
+    opacity: 1;
+    z-index: 2;
+    /* Front image stays visible behind */
+}
+
+.custom-card:hover .img-back {
+    clip-path: circle(150% at 50% 50%);
+    /* Expand to reveal full image */
+}
+
+.custom-card:hover .img-front {
+    opacity: 1;
+}
+
+/* Ensure overlay handles hover correctly */
+.card-img-wrapper .overlay {
+    z-index: 4;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.custom-card:hover .overlay {
+    opacity: 0.1 !important;
+}
+
+/* --- Premium Careers & CTA Sections --- */
+.hover-glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.hover-glass:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.group-hover-up {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.group-hover:hover .group-hover-up {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.hover-lift-btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-warning {
+    box-shadow: 0 4px 15px rgba(253, 163, 11, 0.4);
+}
+
+.rotate-12 {
+    transform: rotate(12deg);
+}
+
+.opacity-10 {
+    opacity: 0.1;
+}
+
+/* --- Premium Services Grid --- */
+.service-item {
+    height: 450px;
+    background: #000;
+    cursor: pointer;
+}
+
+.service-item:hover .service-overlay {
+    opacity: 0.4 !important;
+    /* Brighten image on hover */
+}
+
+.service-bg {
+    transition: transform 0.8s ease;
+}
+
+.service-item:hover .service-bg {
+    transform: scale(1.1);
+}
+
+.service-icon {
+    transition: all 0.4s ease;
+}
+
+.service-item:hover .service-icon {
+    transform: translateY(-10px);
+    color: #fff !important;
+    /* Make icon white on hover */
+}
+
+/* Initial state for description: hidden and zero opacity */
+.service-desc {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    margin-top: 0;
+}
+
+/* Hover state: reveal description */
+.service-item:hover .service-desc {
+    opacity: 1 !important;
+    max-height: 100px;
+    /* Reveal text */
+    margin-top: 15px;
+}
+
+/* --- Hero Text Animations --- */
+@keyframes heroReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.animate-hero-text {
+    opacity: 0;
+    /* Hidden initially */
+    animation: heroReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.4s;
+}
+
+/* --- Accordion Text Box (Description Only) --- */
+.accordion-panel .panel-desc {
+    background: #fda30b;
+    /* Orange Background */
+    border: 2px solid white;
+    /* White Frame */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove previous panel styling if present */
+.accordion-panel .position-absolute.bottom-0 {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding-right: 1.5rem !important;
+}
+
+/* --- Accordion Gallery --- */
+.accordion-panel:hover,
+.accordion-panel.active {
+    flex-grow: 3 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    z-index: 2;
+}
+
+.accordion-panel:hover .panel-overlay,
+.accordion-panel.active .panel-overlay {
+    opacity: 0.1 !important;
+    /* Reveal image */
+}
+
+.accordion-panel:hover .panel-desc,
+.accordion-panel.active .panel-desc {
+    opacity: 1 !important;
+    max-height: 100px !important;
+    transition-delay: 0.2s;
+    /* Wait for expansion */
+}
+
+/* --- Service Card Variety (Elegant Frame) --- */
+.service-card-variety {
+    height: 280px;
+    /* Reduced height */
+    overflow: hidden;
+    position: relative;
+    border: none;
+    border-radius: 8px;
+    /* Sharper, professional corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card-variety .card-img-top {
+    height: 100% !important;
+    object-fit: cover;
+    transform: scale(1.0);
+    transition: transform 0.5s ease;
+}
+
+/* Elegant Frame Effect on Hover */
+.service-card-variety:hover,
+.service-card-variety.mobile-active {
+    box-shadow: inset 0 0 0 3px #ffc107;
+    /* Internal Gold Border */
+}
+
+.service-card-variety:hover .card-img-top,
+.service-card-variety.mobile-active .card-img-top {
+    transform: scale(1.1);
+    /* Gentle Zoom */
+}
+
+.service-card-variety .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    padding: 1.5rem 1rem !important;
+    /* Compact padding */
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+}
+
+.service-card-variety .card-title {
+    color: #fff;
+    font-size: 1.1rem;
+    /* Much smaller, elegant text */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.service-card-variety:hover .card-title,
+.service-card-variety.mobile-active .card-title {
+    color: #ffc107;
+    /* Text turns gold on hover */
+}
+
+/* Remove the previous pseudo-elements */
+.service-card-variety::after,
+.service-card-variety .card-title::after {
+    display: none;
+
+    /* --- Mobile Accordion Animation (Height-based) --- */
+    @media (max-width: 991px) {
+        .accordion-panel {
+            min-height: 80px !important;
+            /* Override inline style */
+            height: 80px;
+            flex-grow: 0 !important;
+            /* Disable flex-grow */
+            overflow: hidden;
+            transition: height 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+        }
+
+        .accordion-panel.active {
+            height: 400px !important;
+            /* Full expansion */
+        }
+
+        /* Adjust content positioning for collapsed state */
+        .accordion-panel .icon-box {
+            transform: scale(0.8);
+            margin-bottom: 0 !important;
+        }
+
+        .accordion-panel .z-1 {
+            bottom: 10px !important;
+            /* Center content vertically in collapsed state */
+            padding: 1rem !important;
+        }
+
+        .accordion-panel.active .z-1 {
+            bottom: 0 !important;
+        }
+    }
+}
+
+/* --- Centered Title Underline --- */
+.title-centered-line {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 30px !important;
+}
+
+.title-centered-line::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #ffc107;
+    /* Warning color */
+    border-radius: 2px;
+}
+
+/* --- Featured Projects Styles --- */
+.project-card {
+    border: 1px solid #eee;
+    /* Default border */
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.project-card:hover,
+.project-card.mobile-active {
+    border-color: #fda30b !important;
+    /* Change border color on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .overflow-hidden {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Image Animation: Bottom to Up */
+.project-card .card-img-top {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(0) scale(1);
+    transform-origin: bottom;
+}
+
+.project-card:hover .card-img-top,
+.project-card.mobile-active .card-img-top {
+    transform: translateY(-10px) scale(1.1);
+    /* Move up and zoom */
+}
+
+/* Overlay Animation: Slide Up from Bottom */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark tint */
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    /* Start hidden below */
+    transition: all 0.5s ease;
+}
+
+.project-card:hover .project-overlay,
+.project-card.mobile-active .project-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    /* Slide up to center */
+}
+
+/* --- Focus Area Cards (Circular Design) --- */
+.focus-card {
+    border: none;
+    background: transparent;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.focus-card .icon-wrapper {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy pop */
+    position: relative;
+    overflow: hidden;
+}
+
+.focus-card .icon-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fda30b;
+    /* Brand orange */
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+.focus-card:hover .icon-wrapper::before,
+.focus-card.mobile-active .icon-wrapper::before {
+    transform: scale(1);
+    /* Fill with orange on hover */
+}
+
+.focus-card:hover .icon-wrapper,
+.focus-card.mobile-active .icon-wrapper {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(253, 163, 11, 0.3);
+    /* Orange glow */
+    border-color: #fda30b;
+}
+
+.focus-card i {
+    font-size: 3.5rem;
+    color: #333;
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+.focus-card:hover i,
+.focus-card.mobile-active i {
+    color: #fff;
+    /* White icon on hover */
+}
+
+.focus-card h5 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.focus-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    max-width: 250px;
+    margin: 0 auto;
+}

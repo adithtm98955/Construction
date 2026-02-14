@@ -13,7 +13,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <img src="xdlogo.png" alt="Construct Logo" style="height:40px;">
+                <img src="assets/images/xdlogo.png" alt="Construct Logo" style="height:40px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#mobileMenuModal">
                 <i class="fas fa-bars text-warning fs-1"></i>
@@ -72,7 +72,7 @@
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title"><img src="xdlogo.png" alt="Construct Logo" style="height: 40px;">
+                    <h5 class="modal-title"><img src="assets/images/xdlogo.png" alt="Construct Logo" style="height: 40px;">
                     </h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
@@ -115,11 +115,11 @@
             </div>
 
             <h1 class="hero-center-title">
-                BUILDING THE <br>
-                <span class="hero-title-outlined">EXTRAORDINARY.</span>
+                <span class="d-block animate-hero-text delay-1">BUILDING THE</span>
+                <span class="hero-title-outlined d-block animate-hero-text delay-2">EXTRAORDINARY.</span>
             </h1>
 
-            <p class="hero-center-lead">
+            <p class="hero-center-lead animate-hero-text delay-3">
                 We combine precision engineering with visionary design to create spaces that inspire.
                 Experience the future of construction with BaseBuilders.
             </p>
@@ -143,131 +143,197 @@
     </header>
 
     <!-- Services Section -->
-    <section class="py-5 bg-light">
-        <div class="container py-5">
+    <section class="py-5 bg-light position-relative" style="overflow: hidden;">
+
+        <div class="container py-5 position-relative" style="z-index: 1;">
             <div class="text-center mb-5">
-                <h6 class="text-warning text-uppercase fw-bold letter-spacing-2">What We Do</h6>
-                <h2 class="display-5 fw-bold text-dark">Our Services</h2>
+                <h6 class="text-warning text-uppercase fw-bold letter-spacing-2">Why Choose Us</h6>
+                <h2 class="display-5 fw-bold text-dark">Building With Excellence</h2>
             </div>
+
             <div class="row g-4">
+                <!-- Card 1: Safety First -->
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm service-card text-center p-4">
-                        <div class="icon-box mb-3 mx-auto bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
-                            style="width: 80px; height: 80px;">
-                            <i class="fas fa-drafting-compass fa-2x"></i>
+                    <div class="card h-100 border-0 shadow-lg hover-lift overflow-hidden custom-card">
+                        <div class="card-img-wrapper position-relative overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/ourworks/unnamed%20(1).webp"
+                                class="img-fluid w-100 h-100 object-fit-cover transition-transform img-front"
+                                alt="Safety First">
+                            <img src="assets/images/ourworks/unnamed%20(5).webp"
+                                class="img-fluid w-100 h-100 object-fit-cover transition-transform img-back position-absolute top-0 start-0"
+                                alt="Safety First Hover">
+                            <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
                         </div>
-                        <h4 class="card-title fw-bold">Planning & Design</h4>
-                        <p class="card-text text-muted">Architectural blueprints and modern structural planning
-                            for your
-                            needs.</p>
+                        <div class="card-body p-4 bg-white position-relative">
+                            <div class="icon-box-floating bg-warning text-white rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                                style="width: 60px; height: 60px; position: absolute; top: -30px; right: 20px;">
+                                <i class="fas fa-shield-alt fa-lg"></i>
+                            </div>
+                            <h4 class="fw-bold mt-2">Safety First</h4>
+                            <p class="text-muted small">We prioritize safety in every aspect of our construction
+                                process, ensuring a secure environment for our team and clients.</p>
+                            <ul class="list-unstyled text-muted small mt-3">
+                                <li class="mb-1"><i class="fas fa-check text-warning me-2"></i> ISO 45001 Certified</li>
+                                <li class="mb-1"><i class="fas fa-check text-warning me-2"></i> Regular Safety Audits
+                                </li>
+                                <li class="mb-1"><i class="fas fa-check text-warning me-2"></i> Zero Accident Policy
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Card 2: Premium Quality -->
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm service-card text-center p-4">
-                        <div class="icon-box mb-3 mx-auto bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
-                            style="width: 80px; height: 80px;">
-                            <i class="fas fa-hard-hat fa-2x"></i>
+                    <div class="card h-100 border-0 shadow-lg hover-lift overflow-hidden custom-card">
+                        <div class="card-img-wrapper position-relative overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/ourworks/unnamed.webp"
+                                class="img-fluid w-100 h-100 object-fit-cover transition-transform img-front"
+                                alt="Premium Quality">
+                            <img src="assets/images/ourworks/unnamed%20(4).webp"
+                                class="img-fluid w-100 h-100 object-fit-cover transition-transform img-back position-absolute top-0 start-0"
+                                alt="Premium Quality Hover">
+                            <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
                         </div>
-                        <h4 class="card-title fw-bold">Construction</h4>
-                        <p class="card-text text-muted">High-quality building construction with premium
-                            materials and
-                            safety.</p>
+                        <div class="card-body p-4 bg-white position-relative">
+                            <div class="icon-box-floating bg-warning text-white rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                                style="width: 60px; height: 60px; position: absolute; top: -30px; right: 20px;">
+                                <i class="fas fa-star fa-lg"></i>
+                            </div>
+                            <h4 class="fw-bold mt-2">Premium Quality</h4>
+                            <p class="text-muted small">Our commitment to quality is unwavering. We use the finest
+                                materials and employ skilled craftsmen.</p>
+                            <ul class="list-unstyled text-muted small mt-3">
+                                <li class="mb-1"><i class="fas fa-check text-warning me-2"></i> Grade A Materials</li>
+                                <li class="mb-1"><i class="fas fa-check text-warning me-2"></i> 50-Year Warranty</li>
+                                <li class="mb-1"><i class="fas fa-check text-warning me-2"></i> Precision Engineering
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Card 3: Sustainability -->
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm service-card text-center p-4">
-                        <div class="icon-box mb-3 mx-auto bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
-                            style="width: 80px; height: 80px;">
-                            <i class="fas fa-tools fa-2x"></i>
+                    <div class="card h-100 border-0 shadow-lg hover-lift overflow-hidden custom-card">
+                        <div class="card-img-wrapper position-relative overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/ourworks/unnamed%20(3).webp"
+                                class="img-fluid w-100 h-100 object-fit-cover transition-transform img-front"
+                                alt="Sustainability">
+                            <img src="assets/images/ourworks/unnamed%20(7).webp"
+                                class="img-fluid w-100 h-100 object-fit-cover transition-transform img-back position-absolute top-0 start-0"
+                                alt="Sustainability Hover">
+                            <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
                         </div>
-                        <h4 class="card-title fw-bold">Renovation</h4>
-                        <p class="card-text text-muted">Transform your existing space with our expert renovation
-                            services.</p>
+                        <div class="card-body p-4 bg-white position-relative">
+                            <div class="icon-box-floating bg-warning text-white rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                                style="width: 60px; height: 60px; position: absolute; top: -30px; right: 20px;">
+                                <i class="fas fa-leaf fa-lg"></i>
+                            </div>
+                            <h4 class="fw-bold mt-2">Sustainability</h4>
+                            <p class="text-muted small">Building for the future means building sustainably. We integrate
+                                eco-friendly practices in all projects.</p>
+                            <ul class="list-unstyled text-muted small mt-3">
+                                <li class="mb-1"><i class="fas fa-check text-warning me-2"></i> LEED Certification</li>
+                                <li class="mb-1"><i class="fas fa-check text-warning me-2"></i> Energy Efficient Design
+                                </li>
+                                <li class="mb-1"><i class="fas fa-check text-warning me-2"></i> Recycled Materials</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Scrolling Services Ticker -->
-    <section class="py-5 bg-white border-top overflow-hidden">
-        <div class="container">
-            <div class="row mb-4 text-center">
-                <div class="col-12">
-                    <h5 class="text-uppercase text-muted letter-spacing-2 small fw-bold">Our Expertise</h5>
+    <!-- Premium Services Grid -->
+    <section class="py-5 bg-white position-relative">
+        <div class="container py-5">
+            <div class="row mb-5 align-items-end">
+                <div class="col-lg-8">
+                    <h6 class="text-warning text-uppercase fw-bold letter-spacing-2 mb-2">Our Expertise</h6>
+                    <h2 class="display-4 fw-bold text-dark mb-0">Expertise That Defines Skylines</h2>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="services.html" class="btn btn-outline-dark rounded-0 px-4 py-2 mt-3 mt-lg-0">View All
+                        Services <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
 
-            <div class="marquee-container mask-edges">
-                <div class="marquee-wrapper">
-                    <!-- Set 1 -->
-                    <div class="marquee-card">
-                        <div class="card bg-light border-0 p-4 rounded-3 h-100">
-                            <div class="text-warning mb-2"><i class="fas fa-drafting-compass fa-2x"></i></div>
-                            <h5 class="fw-bold">Planning & Design</h5>
-                            <p class="small text-muted mb-0">Architectural blueprints and modern structural
-                                planning.
-                            </p>
+            <div class="row g-2 service-grid">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-item position-relative overflow-hidden h-100 rounded-2">
+                        <div class="service-bg position-absolute w-100 h-100 top-0 start-0"
+                            style="background: url('assets/images/ourworks/unnamed (1).webp') center/cover;"></div>
+                        <div
+                            class="service-overlay position-absolute w-100 h-100 top-0 start-0 bg-dark opacity-75 transition-opacity">
+                        </div>
+                        <div
+                            class="service-content position-relative p-4 p-xl-5 h-100 d-flex flex-column justify-content-end z-index-2">
+                            <i
+                                class="fas fa-drafting-compass fa-3x text-warning mb-4 service-icon transition-transform"></i>
+                            <h4 class="text-white fw-bold mb-3">Planning & Design</h4>
+                            <p class="text-white-50 service-desc mb-0 opacity-0 transition-all">Architectural blueprints
+                                and modern structural planning tailored to your vision.</p>
+                            <a href="services.html" class="stretched-link"></a>
                         </div>
                     </div>
-                    <div class="marquee-card">
-                        <div class="card bg-light border-0 p-4 rounded-3 h-100">
-                            <div class="text-warning mb-2"><i class="fas fa-hard-hat fa-2x"></i></div>
-                            <h5 class="fw-bold">Construction</h5>
-                            <p class="small text-muted mb-0">High-quality building construction with premium
-                                materials.
-                            </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-item position-relative overflow-hidden h-100 rounded-2">
+                        <div class="service-bg position-absolute w-100 h-100 top-0 start-0"
+                            style="background: url('assets/images/ourworks/unnamed (2).webp') center/cover;"></div>
+                        <div
+                            class="service-overlay position-absolute w-100 h-100 top-0 start-0 bg-dark opacity-75 transition-opacity">
+                        </div>
+                        <div
+                            class="service-content position-relative p-4 p-xl-5 h-100 d-flex flex-column justify-content-end z-index-2">
+                            <i class="fas fa-hard-hat fa-3x text-warning mb-4 service-icon transition-transform"></i>
+                            <h4 class="text-white fw-bold mb-3">Construction</h4>
+                            <p class="text-white-50 service-desc mb-0 opacity-0 transition-all">High-quality execution
+                                with premium materials and rigorous safety standards.</p>
+                            <a href="services.html" class="stretched-link"></a>
                         </div>
                     </div>
-                    <div class="marquee-card">
-                        <div class="card bg-light border-0 p-4 rounded-3 h-100">
-                            <div class="text-warning mb-2"><i class="fas fa-tools fa-2x"></i></div>
-                            <h5 class="fw-bold">Renovation</h5>
-                            <p class="small text-muted mb-0">Transform your existing space with our expert
-                                services.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-item position-relative overflow-hidden h-100 rounded-2">
+                        <div class="service-bg position-absolute w-100 h-100 top-0 start-0"
+                            style="background: url('assets/images/ourworks/unnamed (3).webp') center/cover;"></div>
+                        <div
+                            class="service-overlay position-absolute w-100 h-100 top-0 start-0 bg-dark opacity-75 transition-opacity">
+                        </div>
+                        <div
+                            class="service-content position-relative p-4 p-xl-5 h-100 d-flex flex-column justify-content-end z-index-2">
+                            <i class="fas fa-tools fa-3x text-warning mb-4 service-icon transition-transform"></i>
+                            <h4 class="text-white fw-bold mb-3">Renovation</h4>
+                            <p class="text-white-50 service-desc mb-0 opacity-0 transition-all">Transforming existing
+                                spaces with expert craftsmanship and modern utility.</p>
+                            <a href="services.html" class="stretched-link"></a>
                         </div>
                     </div>
-                    <div class="marquee-card">
-                        <div class="card bg-light border-0 p-4 rounded-3 h-100">
-                            <div class="text-warning mb-2"><i class="fas fa-city fa-2x"></i></div>
-                            <h5 class="fw-bold">Urban Planning</h5>
-                            <p class="small text-muted mb-0">Sustainable city development and infrastructure.
-                            </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-item position-relative overflow-hidden h-100 rounded-2">
+                        <div class="service-bg position-absolute w-100 h-100 top-0 start-0"
+                            style="background: url('assets/images/ourworks/unnamed (5).webp') center/cover;"></div>
+                        <div
+                            class="service-overlay position-absolute w-100 h-100 top-0 start-0 bg-dark opacity-75 transition-opacity">
                         </div>
-                    </div>
-                    <!-- Set 2 (Duplicate for scroll) -->
-                    <div class="marquee-card">
-                        <div class="card bg-light border-0 p-4 rounded-3 h-100">
-                            <div class="text-warning mb-2"><i class="fas fa-drafting-compass fa-2x"></i></div>
-                            <h5 class="fw-bold">Planning & Design</h5>
-                            <p class="small text-muted mb-0">Architectural blueprints and modern structural
-                                planning.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="marquee-card">
-                        <div class="card bg-light border-0 p-4 rounded-3 h-100">
-                            <div class="text-warning mb-2"><i class="fas fa-hard-hat fa-2x"></i></div>
-                            <h5 class="fw-bold">Construction</h5>
-                            <p class="small text-muted mb-0">High-quality building construction with premium
-                                materials.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="marquee-card">
-                        <div class="card bg-light border-0 p-4 rounded-3 h-100">
-                            <div class="text-warning mb-2"><i class="fas fa-tools fa-2x"></i></div>
-                            <h5 class="fw-bold">Renovation</h5>
-                            <p class="small text-muted mb-0">Transform your existing space with our expert
-                                services.</p>
-                        </div>
-                    </div>
-                    <div class="marquee-card">
-                        <div class="card bg-light border-0 p-4 rounded-3 h-100">
-                            <div class="text-warning mb-2"><i class="fas fa-city fa-2x"></i></div>
-                            <h5 class="fw-bold">Urban Planning</h5>
-                            <p class="small text-muted mb-0">Sustainable city development and infrastructure.
-                            </p>
+                        <div
+                            class="service-content position-relative p-4 p-xl-5 h-100 d-flex flex-column justify-content-end z-index-2">
+                            <i class="fas fa-city fa-3x text-warning mb-4 service-icon transition-transform"></i>
+                            <h4 class="text-white fw-bold mb-3">Urban Planning</h4>
+                            <p class="text-white-50 service-desc mb-0 opacity-0 transition-all">Sustainable city
+                                development and infrastructure for the next generation.</p>
+                            <a href="services.html" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
@@ -280,9 +346,12 @@
         <div class="container py-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-7 mb-4 mb-lg-0">
-                    <img id="projectImage" data-src="ourworks/unnamed (2).webp" src="ourworks/unnamed (2).webp"
-                        class="img-fluid rounded-0 shadow-sm w-100 fade-in" alt="Project Image"
-                        style="min-height: 400px; object-fit: cover;">
+                    <div id="showcase-gallery"
+                        class="showcase-gallery shadow-sm rounded-3 overflow-hidden position-relative"
+                        style="min-height: 400px; height: 100%;">
+                        <!-- Images will be injected here by JS -->
+                        <img src="assets/images/ourworks/unnamed (2).webp" class="gallery-img active" alt="Project Image">
+                    </div>
                 </div>
                 <div class="col-lg-5">
                     <nav class="nav showcase-nav mb-5" id="projectTabs">
@@ -320,49 +389,104 @@
         </div>
     </section>
 
-    <!-- Careers Banner -->
-    <section class="py-5 bg-white">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-5 display-6">Construct is more than a job, it's your career and it matters.
-                <br>Explore a career with Construct.
-            </h2>
-            <div class="row g-3 justify-content-center">
+    <!-- Careers Premium Section -->
+    <section class="py-5 position-relative overflow-hidden"
+        style="min-height: 500px; display: flex; align-items: center;">
+        <!-- Background Image with Parallax -->
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+            style="background: url('assets/images/ourworks/unnamed (1).webp') no-repeat center center/cover; filter: grayscale(100%) brightness(0.3) contrast(1.2);">
+        </div>
+        <!-- Sunlight Effect - Vivid & Visible -->
+        <!-- Main Glare -->
+        <div class="position-absolute top-0 end-0 w-100 h-100"
+            style="background: radial-gradient(circle at 80% 0%, rgba(255, 200, 100, 0.6) 0%, rgba(255, 220, 180, 0.3) 30%, rgba(0, 0, 0, 0) 70%); mix-blend-mode: screen; pointer-events: none; z-index: 1;">
+        </div>
+        <!-- God Rays / Beam -->
+        <div class="position-absolute top-0 end-0 w-100 h-100"
+            style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 40%); mix-blend-mode: overlay; pointer-events: none; z-index: 1;">
+        </div>
+
+        <div class="container position-relative z-index-2 text-center text-white">
+            <span
+                class="d-inline-block py-1 px-3 border border-warning rounded-pill text-warning mb-3 fw-bold small letter-spacing-2">CAREERS
+                AT CONSTRUCT</span>
+            <h2 class="display-4 fw-bold mb-4">More Than a Job.<br>It's Your Legacy.</h2>
+            <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 700px;">
+                Join a team of visionaries and craftsmen building the landmarks of tomorrow.
+                Construct offers more than employment—we offer a path to mastery.
+            </p>
+
+            <div class="row g-4 justify-content-center">
                 <div class="col-md-4 col-lg-3">
-                    <a href="contact.html" class="btn btn-brand w-100 py-3 rounded-1">Professionals</a>
+                    <a href="contact.html"
+                        class="card bg-transparent border-light border-opacity-25 h-100 text-decoration-none hover-glass group-hover">
+                        <div class="card-body py-5">
+                            <i class="fas fa-user-tie fa-2x text-warning mb-3 transition-transform group-hover-up"></i>
+                            <h5 class="text-white fw-bold">Professionals</h5>
+                            <p class="small text-white-50 mb-0">Project Managers, Architects, & Engineers</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 col-lg-3">
-                    <a href="contact.html" class="btn btn-brand w-100 py-3 rounded-1">Skilled Trades + Craft</a>
+                    <a href="contact.html"
+                        class="card bg-transparent border-light border-opacity-25 h-100 text-decoration-none hover-glass group-hover">
+                        <div class="card-body py-5">
+                            <i class="fas fa-tools fa-2x text-warning mb-3 transition-transform group-hover-up"></i>
+                            <h5 class="text-white fw-bold">Skilled Trades</h5>
+                            <p class="small text-white-50 mb-0">Electricians, Carpenters, & Masons</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 col-lg-3">
-                    <a href="contact.html" class="btn btn-brand w-100 py-3 rounded-1">Interns</a>
+                    <a href="contact.html"
+                        class="card bg-transparent border-light border-opacity-25 h-100 text-decoration-none hover-glass group-hover">
+                        <div class="card-body py-5">
+                            <i
+                                class="fas fa-graduation-cap fa-2x text-warning mb-3 transition-transform group-hover-up"></i>
+                            <h5 class="text-white fw-bold">Internships</h5>
+                            <p class="small text-white-50 mb-0">Start your journey with mentorship</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Geometric CTA Section -->
-    <section class="py-5 geometric-cta optimize-rendering">
+    <!-- Premium CTA Section -->
+    <section class="py-5 position-relative">
         <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="display-4 fw-bold mb-3">Ready to work together?</h2>
-                    <p class="lead text-muted mb-5">Whether you have a project in mind and you're looking for a
-                        reliable
-                        construction partner or you're looking to take the next step in your career, we want to
-                        hear
-                        from you!</p>
-                    <div class="d-flex flex-column flex-sm-row gap-3">
-                        <a href="contact.html" class="btn btn-brand rounded-0 px-4 py-3">Build a Project With
-                            Us</a>
-                        <a href="contact.html" class="btn btn-outline-brand rounded-0 px-4 py-3">Build a Career
-                            With
-                            Us</a>
+            <div class="bg-dark text-white rounded-4 overflow-hidden shadow-lg position-relative p-5">
+                <!-- Abstract Texture Background -->
+                <div class="position-absolute top-0 start-0 w-100 h-100"
+                    style="background: linear-gradient(45deg, #1a1a1a, #2c2c2c); z-index: 0;"></div>
+                <div class="position-absolute top-0 end-0 w-50 h-100 opacity-25"
+                    style="background: url('hero-bg.jpg') no-repeat center right/cover; clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%); mix-blend-mode: overlay;">
+                </div>
+
+                <div class="row align-items-center position-relative z-index-1">
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                        <h2 class="display-5 fw-bold mb-3">Ready to Build the Extraordinary?</h2>
+                        <p class="lead text-white-50 mb-4">
+                            Whether you're envisioning a new manufacturing hub or looking to elevate your career,
+                            we are the partners you can trust to deliver excellence.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="contact.html"
+                                class="btn btn-warning btn-lg px-5 rounded-pill fw-bold shadow-warning hover-lift-btn">
+                                Start Your Project <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                            <a href="contact.html"
+                                class="btn btn-outline-light btn-lg px-5 rounded-pill fw-bold hover-lift-btn">
+                                Join Our Team
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center text-lg-end">
+                        <i class="fas fa-hard-hat fa-10x text-white opacity-10 rotate-12"></i>
                     </div>
                 </div>
-                <!-- Right side is handled by background gradient -->
             </div>
         </div>
-
     </section>
 
     <!-- Footer -->
@@ -372,7 +496,7 @@
                 <!-- Column 1: Logo -->
                 <div class="col-lg-3 col-md-6 mb-4">
                     <a class="navbar-brand fw-bold fs-3" href="index.html">
-                        <img src="d.png" alt="Construct Logo" style="height: 50px;">
+                        <img src="assets/images/d.png" alt="Construct Logo" style="height: 50px;">
                     </a>
                     <p class="mt-3 text-white-50">
                         Building the future with excellence. Trusted by thousands for quality construction.
@@ -388,7 +512,8 @@
                     <h5 class="text-warning mb-3">Contact Us</h5>
                     <ul class="list-unstyled text-white-50">
                         <li class="mb-2 d-flex"><i class="fas fa-map-marker-alt me-2 text-warning mt-1"></i>
-                            <span>Malaparamba Housing Colony, Kozhikode, Kerala 673009</span></li>
+                            <span>Malaparamba Housing Colony, Kozhikode, Kerala 673009</span>
+                        </li>
                         <li class="mb-2"><i class="fas fa-phone me-2 text-warning"></i> +91 99958 38484 / 98959 69423
                         </li>
                         <li class="mb-2"><i class="fas fa-envelope me-2 text-warning"></i> Basebuild123@gmail.com
@@ -439,9 +564,9 @@
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Lazy Load Script -->
-    <script src="image-loader.js"></script>
+    <script src="assets/js/image-loader.js"></script>
     <!-- Project Tabs Script -->
-    <script src="project-tabs.js"></script>
+    <script src="assets/js/project-tabs.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Preload Hero Image for Performance -->
     <link rel="preload" as="image" href="engineers/wdw.jpg">
 </head>
@@ -35,7 +35,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html"><img src="xdlogo.png" alt="Construct Logo"
+            <a class="navbar-brand fw-bold" href="index.html"><img src="assets/images/xdlogo.png" alt="Construct Logo"
                     style="height: 40px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#mobileMenuModal">
                 <i class="fas fa-bars text-warning fs-1"></i>
@@ -58,7 +58,7 @@
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title"><img src="xdlogo.png" alt="Construct Logo" style="height: 40px;">
+                    <h5 class="modal-title"><img src="assets/images/xdlogo.png" alt="Construct Logo" style="height: 40px;">
                     </h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
@@ -86,7 +86,7 @@
     <!-- Page Header with Background Image -->
     <!-- Page Header with Background Image -->
     <section class="position-relative text-white text-center d-flex align-items-center justify-content-center"
-        style="min-height: 80vh; background: url('engineers/wdw.jpg') center/cover no-repeat;">
+        style="min-height: 80vh; background: url('assets/images/engineers/pointing-sketch.jpg') center/cover no-repeat;">
         <!-- Gradient Overlay -->
         <div class="position-absolute top-0 start-0 w-100 h-100"
             style="background: linear-gradient(135deg, rgba(15, 28, 46, 0.9) 0%, rgba(15, 28, 46, 0.4) 100%);"></div>
@@ -141,50 +141,114 @@
         </div>
     </section>
 
-    <section class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
+    <!-- Who We Are Section -->
+    <section class="py-5 bg-white overflow-hidden">
+        <div class="container py-5">
+            <!-- Part 1: Introduction -->
+            <div class="row align-items-center mb-5 gx-5">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img data-src="about/xyz.jpg"
-                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                        class="img-fluid rounded shadow" alt="Construction Site">
+                    <div class="position-relative">
+                        <img src="assets/images/ourworks/unnamed (1).webp" class="img-fluid rounded-4 shadow-lg position-relative z-2"
+                            alt="Base Builders Architecture">
+                        <div class="position-absolute top-0 start-0 translate-middle bg-warning rounded-circle d-none d-lg-block"
+                            style="width: 200px; height: 200px; opacity: 0.1; z-index: 1;"></div>
+                        <div class="position-absolute bottom-0 end-0 translate-middle-x bg-dark rounded-circle d-none d-lg-block"
+                            style="width: 150px; height: 150px; opacity: 0.05; z-index: 1;"></div>
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="fw-bold mb-4">Our Story</h2>
-                    <p class="text-muted">Founded in 2010, Construct has grown from a small local builder to a regional
-                        leader in commercial and residential construction. We pride ourselves on innovation, safety, and
-                        sustainability.</p>
-                    <p class="text-muted">Our team of expert engineers, architects, and builders work tirelessly to
-                        bring your vision to life. From skyscrapers to cozy homes, we handle every project with the
-                        utmost care.</p>
+                    <h6 class="text-warning text-uppercase fw-bold letter-spacing-2 mb-2">Who We Are</h6>
+                    <h2 class="display-5 fw-bold mb-4 title-centered-line d-inline-block">Base Builders <span
+                            class="text-warning">Calicut</span></h2>
+                    <p class="lead text-dark opacity-75 mb-4">
+                        We have taken utmost care in adding a touch of creativity, aesthetics, and ethics to every
+                        architectural excellence achieved so far.
+                    </p>
+                    <p class="text-muted mb-4">
+                        In order to provide excellence in quality living, we ensure that even the minute requirements of
+                        our customers are addressed.
+                        Our services are designed with a focus on your specific requirements, supported by
+                        well-organized contracting.
+                    </p>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-check-circle text-warning fa-lg me-3"></i>
+                        <span class="fw-bold text-dark">Creativity & Aesthetics</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle text-warning fa-lg me-3"></i>
+                        <span class="fw-bold text-dark">Ethical Construction</span>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="row g-3 mt-4">
-                        <div class="col-md-4">
-                            <div class="card bg-white border border-warning h-100 shadow-sm">
-                                <div class="card-body text-center p-3">
-                                    <div class="text-warning mb-2"><i class="fas fa-eye fa-2x"></i></div>
-                                    <h6 class="fw-bold text-uppercase small">Our Vision</h6>
-                                    <p class="small text-muted mb-0">To lead the industry with innovation and trust.</p>
-                                </div>
+            <!-- Part 2: Premium Standards -->
+            <div class="row align-items-center flex-lg-row-reverse mt-5 gx-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="position-relative">
+                        <img src="assets/images/ourworks/unnamed (2).webp" class="img-fluid rounded-4 shadow-lg position-relative z-2"
+                            alt="Premium Living Standards">
+                        <!-- Decorative Border -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100 border border-warning border-2 rounded-4"
+                            style="transform: translate(20px, 20px); z-index: 1;"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Global Standards in <br>Living Style</h2>
+                    <p class="text-muted mb-4">
+                        We ensure excellence in construction quality, with progressive design elements as well as
+                        achieving global standards in construction and living style.
+                        We believe the <strong>customer is supreme</strong>.
+                    </p>
+                    <p class="text-muted mb-4">
+                        Our principles and values are a reflection of our efforts to provide residents with a living
+                        atmosphere which they truly desire.
+                    </p>
+                    <blockquote class="border-start border-warning border-4 ps-4 fst-italic text-dark">
+                        "We maintain a highly skilled professional pool with brilliant expertise and utilize the best
+                        available material for construction, ensuring timely delivery but never compromising on
+                        quality."
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- Part 3: Core Values Cards -->
+            <div class="row g-4 mt-5">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-lift bg-light">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box-floating bg-white text-warning rounded-circle shadow-sm mx-auto mb-3 d-flex align-items-center justify-content-center"
+                                style="width: 70px; height: 70px;">
+                                <i class="fas fa-eye fa-2x"></i>
                             </div>
+                            <h5 class="fw-bold text-uppercase">Our Vision</h5>
+                            <p class="text-muted small">To add creativity, aesthetics, and ethics to every architectural
+                                excellence we deliver.</p>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card bg-white border border-warning h-100 shadow-sm">
-                                <div class="card-body text-center p-3">
-                                    <div class="text-warning mb-2"><i class="fas fa-bullseye fa-2x"></i></div>
-                                    <h6 class="fw-bold text-uppercase small">Our Mission</h6>
-                                    <p class="small text-muted mb-0">Building foundations for a better tomorrow.</p>
-                                </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-lift bg-light">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box-floating bg-white text-warning rounded-circle shadow-sm mx-auto mb-3 d-flex align-items-center justify-content-center"
+                                style="width: 70px; height: 70px;">
+                                <i class="fas fa-bullseye fa-2x"></i>
                             </div>
+                            <h5 class="fw-bold text-uppercase">Our Mission</h5>
+                            <p class="text-muted small">To provide excellence in quality living by addressing even the
+                                minute requirements of our customers.</p>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card bg-white border border-warning h-100 shadow-sm">
-                                <div class="card-body text-center p-3">
-                                    <div class="text-warning mb-2"><i class="fas fa-gem fa-2x"></i></div>
-                                    <h6 class="fw-bold text-uppercase small">Our Values</h6>
-                                    <p class="small text-muted mb-0">Integrity, Quality, and customer focus.</p>
-                                </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-lift bg-light">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box-floating bg-white text-warning rounded-circle shadow-sm mx-auto mb-3 d-flex align-items-center justify-content-center"
+                                style="width: 70px; height: 70px;">
+                                <i class="fas fa-gem fa-2x"></i>
                             </div>
+                            <h5 class="fw-bold text-uppercase">Our Promise</h5>
+                            <p class="text-muted small">Utilizing the best available materials and ensuring timely
+                                delivery without compromising quality.</p>
                         </div>
                     </div>
                 </div>
@@ -192,80 +256,95 @@
         </div>
     </section>
 
-    <!-- Life at Construct Section -->
-    <section class="py-5 bg-light optimize-rendering">
-        <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="fw-bold display-5 mb-3">Life at Construct</h2>
-                    <p class="lead text-muted">A glimpse into the dedication and expertise of our team.</p>
+    <!-- Crafting Dreams - Accordion Gallery -->
+    <section class="py-5 bg-light overflow-hidden">
+        <div class="container py-5">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h6 class="text-warning text-uppercase fw-bold letter-spacing-2 mb-2">Beyond Construction</h6>
+                    <h2 class="display-5 fw-bold text-dark">Crafting Dreams Into <span
+                            class="text-warning">Reality</span></h2>
+                    <p class="lead text-muted">Experience the passion and precision that goes into every square foot we
+                        build.</p>
                 </div>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-warning border-2 shadow-sm rounded-3 overflow-hidden hover-lift">
-                        <img data-src="engineers/2147710860.jpg"
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                            class="card-img-top" alt="Focus on Detail" style="height: 300px; object-fit: cover;">
-                        <div class="card-body bg-white text-center">
-                            <h5 class="fw-bold mb-1">Focus on Detail</h5>
-                            <p class="text-muted small mb-0">Precision in every calculation.</p>
-                        </div>
+
+            <!-- Accordion Gallery Container -->
+            <div class="d-flex flex-column flex-lg-row gap-3" style="min-height: 350px;">
+
+                <!-- Panel 1: Precision -->
+                <div class="accordion-panel position-relative rounded-4 overflow-hidden flex-fill shadow-sm"
+                    style="background: url('assets/images/ourworks/unnamed (3).webp') center/cover; transition: all 0.5s ease; cursor: pointer; min-height: 200px;">
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 transition-opacity panel-overlay">
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 p-4 text-white w-100 z-1">
+                        <div class="icon-box mb-3 text-warning"><i class="fas fa-drafting-compass fa-2x"></i></div>
+                        <h3 class="fw-bold mb-2">Precision</h3>
+                        <p class="fw-bold text-white panel-desc opacity-0 transition-opacity"
+                            style="max-height: 0; overflow: hidden;">Every measurement matters. We ensure 100% accuracy
+                            in our architectural planning.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-warning border-2 shadow-sm rounded-3 overflow-hidden hover-lift">
-                        <img data-src="engineers/d.jpg"
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                            class="card-img-top" alt="On-Site Leadership" style="height: 300px; object-fit: cover;">
-                        <div class="card-body bg-white text-center">
-                            <h5 class="fw-bold mb-1">On-Site Leadership</h5>
-                            <p class="text-muted small mb-0">Guiding projects to success.</p>
-                        </div>
+
+                <!-- Panel 2: Passion -->
+                <div class="accordion-panel position-relative rounded-4 overflow-hidden flex-fill shadow-sm"
+                    style="background: url('assets/images/ourworks/unnamed (7).webp') center/cover; transition: all 0.5s ease; cursor: pointer; min-height: 200px;">
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 transition-opacity panel-overlay">
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 p-4 text-white w-100 z-1">
+                        <div class="icon-box mb-3 text-warning"><i class="fas fa-hammer fa-2x"></i></div>
+                        <h3 class="fw-bold mb-2">Passion</h3>
+                        <p class="fw-bold text-white panel-desc opacity-0 transition-opacity"
+                            style="max-height: 0; overflow: hidden;">Our team builds
+                            with heart. Dedication is the mortar that holds our projects together.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-warning border-2 shadow-sm rounded-3 overflow-hidden hover-lift">
-                        <img data-src="engineers/pointing-sketch.jpg"
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                            class="card-img-top" alt="Collaborative Design" style="height: 300px; object-fit: cover;">
-                        <div class="card-body bg-white text-center">
-                            <h5 class="fw-bold mb-1">Collaborative Design</h5>
-                            <p class="text-muted small mb-0">Innovation through teamwork.</p>
-                        </div>
+
+                <!-- Panel 3: Perfection -->
+                <div class="accordion-panel position-relative rounded-4 overflow-hidden flex-fill shadow-sm"
+                    style="background: url('assets/images/ourworks/unnamed (5).webp') center/cover; transition: all 0.5s ease; cursor: pointer; min-height: 200px;">
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 transition-opacity panel-overlay">
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 p-4 text-white w-100 z-1">
+                        <div class="icon-box mb-3 text-warning"><i class="fas fa-medal fa-2x"></i></div>
+                        <h3 class="fw-bold mb-2">Perfection</h3>
+                        <p class="fw-bold text-white panel-desc opacity-0 transition-opacity"
+                            style="max-height: 0; overflow: hidden;">We don't stop until it's flawless. Global standards
+                            for local masterpieces.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-warning border-2 shadow-sm rounded-3 overflow-hidden hover-lift">
-                        <img data-src="engineers/s.jpg"
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                            class="card-img-top" alt="Quality Assurance" style="height: 300px; object-fit: cover;">
-                        <div class="card-body bg-white text-center">
-                            <h5 class="fw-bold mb-1">Quality Assurance</h5>
-                            <p class="text-muted small mb-0">Excellence is our standard.</p>
-                        </div>
+
+                <!-- Panel 4: Innovation -->
+                <div class="accordion-panel position-relative rounded-4 overflow-hidden flex-fill shadow-sm"
+                    style="background: url('assets/images/ourworks/unnamed (2).webp') center/cover; transition: all 0.5s ease; cursor: pointer; min-height: 200px;">
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 transition-opacity panel-overlay">
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 p-4 text-white w-100 z-1">
+                        <div class="icon-box mb-3 text-warning"><i class="fas fa-lightbulb fa-2x"></i></div>
+                        <h3 class="fw-bold mb-2">Innovation</h3>
+                        <p class="fw-bold text-white panel-desc opacity-0 transition-opacity"
+                            style="max-height: 0; overflow: hidden;">Pushing boundaries with cutting-edge design and
+                            modern
+                            construction techniques.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-warning border-2 shadow-sm rounded-3 overflow-hidden hover-lift">
-                        <img data-src="engineers/sd.jpg"
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                            class="card-img-top" alt="Visionary Planning" style="height: 300px; object-fit: cover;">
-                        <div class="card-body bg-white text-center">
-                            <h5 class="fw-bold mb-1">Visionary Planning</h5>
-                            <p class="text-muted small mb-0">Shaping the skylines of tomorrow.</p>
-                        </div>
+
+                <!-- Panel 5: Legacy -->
+                <div class="accordion-panel position-relative rounded-4 overflow-hidden flex-fill shadow-sm"
+                    style="background: url('assets/images/ourworks/unnamed (6).webp') center/cover; transition: all 0.5s ease; cursor: pointer; min-height: 200px;">
+                    <div
+                        class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 transition-opacity panel-overlay">
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-warning border-2 shadow-sm rounded-3 overflow-hidden hover-lift">
-                        <img data-src="engineers/wdw.jpg"
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                            class="card-img-top" alt="Client Partnership" style="height: 300px; object-fit: cover;">
-                        <div class="card-body bg-white text-center">
-                            <h5 class="fw-bold mb-1">Client Partnership</h5>
-                            <p class="text-muted small mb-0">Building relationships that last.</p>
-                        </div>
+                    <div class="position-absolute bottom-0 start-0 p-4 text-white w-100 z-1">
+                        <div class="icon-box mb-3 text-warning"><i class="fas fa-landmark fa-2x"></i></div>
+                        <h3 class="fw-bold mb-2">Legacy</h3>
+                        <p class="fw-bold text-white panel-desc opacity-0 transition-opacity"
+                            style="max-height: 0; overflow: hidden;">Building structures that stand the test of time,
+                            creating a lasting impact.</p>
                     </div>
                 </div>
             </div>
@@ -280,7 +359,7 @@
                 <!-- Column 1: Logo -->
                 <div class="col-lg-3 col-md-6 mb-4">
                     <a class="navbar-brand fw-bold fs-3" href="index.html">
-                        <img src="d.png" alt="Construct Logo" style="height: 50px;">
+                        <img src="assets/images/d.png" alt="Construct Logo" style="height: 50px;">
                     </a>
                     <p class="mt-3 text-white-50">
                         Building the future with excellence. Trusted by thousands for quality construction.
@@ -296,7 +375,8 @@
                     <h5 class="text-warning mb-3">Contact Us</h5>
                     <ul class="list-unstyled text-white-50">
                         <li class="mb-2 d-flex"><i class="fas fa-map-marker-alt me-2 text-warning mt-1"></i>
-                            <span>Malaparamba Housing Colony, Kozhikode, Kerala 673009</span></li>
+                            <span>Malaparamba Housing Colony, Kozhikode, Kerala 673009</span>
+                        </li>
                         <li class="mb-2"><i class="fas fa-phone me-2 text-warning"></i> +91 99958 38484 / 98959 69423
                         </li>
                         <li class="mb-2"><i class="fas fa-envelope me-2 text-warning"></i> Basebuild123@gmail.com</li>
@@ -344,7 +424,45 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="image-loader.js"></script>
+    <script src="assets/js/image-loader.js"></script>
+    <script>
+        // Accordion Gallery Interaction for Mobile/Touch
+        document.addEventListener('DOMContentLoaded', function () {
+            const panels = document.querySelectorAll('.accordion-panel');
+
+            // Click Handler
+            panels.forEach(panel => {
+                panel.addEventListener('click', function () {
+                    panels.forEach(p => {
+                        if (p !== this) p.classList.remove('active');
+                    });
+                    this.classList.toggle('active');
+                });
+            });
+
+            // Scroll Handler (Mobile Only)
+            if (window.innerWidth <= 991) {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '-20% 0px -20% 0px', // Trigger when element is in middle 60% of screen
+                    threshold: 0.5
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Close others
+                            panels.forEach(p => p.classList.remove('active'));
+                            // Open current
+                            entry.target.classList.add('active');
+                        }
+                    });
+                }, observerOptions);
+
+                panels.forEach(panel => observer.observe(panel));
+            }
+        });
+    </script>
 </body>
 
 </html>
